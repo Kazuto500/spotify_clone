@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
-  static String? clientId = '9d53c19ed67e4627be1464279a79a8a9';
-  static String? clientSecret = '73e2b167aa034c9187ad4c1ad0fd0bd9';
+  static const String clientId = '9d53c19ed67e4627be1464279a79a8a9';
+  static const String clientSecret = '73e2b167aa034c9187ad4c1ad0fd0bd9';
 
   static const String authDomain = "accounts.spotify.com";
   static const String authRedirectUri = "spotifyclone://sign";
