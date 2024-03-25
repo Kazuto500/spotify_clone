@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:spotify_clone/data/controllers/favorites_controller.dart';
@@ -15,16 +14,14 @@ import 'package:spotify_clone/ui/pages/login/login_page.dart';
 import 'package:spotify_clone/ui/pages/splash/splash.dart';
 
 
-Future<void> main() async {
-  await dotenv.load(fileName: ".env");
+void main(){
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Color(0xff121212),
     ),
   );  
-  runApp(const MyApp());
-  
+  runApp(const MyApp());  
 }
 
 class MyApp extends StatelessWidget {
