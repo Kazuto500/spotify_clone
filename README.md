@@ -12,8 +12,7 @@ To get started with the Spotify Clone project, follow these steps:
 
 Ensure you have the following installed on your system:
 
-- [Flutter](https://flutter.dev/) - version 2.0 or higher
-- [Dart](https://dart.dev/) - version 2.12 or higher
+- [Flutter](https://flutter.dev/) and all its dependencies
 - A developer account on Spotify to obtain API credentials.
 
 ### Installation
@@ -99,10 +98,15 @@ Example snippet from `AndroidManifest.xml`:
 5. Be sure to review and adjust the values in the XML files, pubspec.yaml, build.gradle, and AndroidManifest.xml to verify that everything correctly matches the application requirements.
 
 ### Compilation
+To compile there are two options:
 
-To compile the application, run the following command:
-
+1. To compile the application in debug mode, run the following command:
+````
+flutter run
+````
+2. To build the app to generate an apk on your mobile device, run the following command: 
 ````
 flutter build apk
 ````
+- Keep in mind that to generate an apk you must have your mobile device connected with USB debugging in the device manager of your code editor (vscode, android studio, etc).
 
