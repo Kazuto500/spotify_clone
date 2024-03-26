@@ -6,12 +6,10 @@ import 'package:http/http.dart' as http;
 class Api {
   static const String clientId = '9d53c19ed67e4627be1464279a79a8a9';
   static const String clientSecret = '73e2b167aa034c9187ad4c1ad0fd0bd9';
-
-  static const String authDomain = "accounts.spotify.com";
-  static const String authRedirectUri = "spotifyclone://sign";
+  static const String redirectUri = "spotifyclone://sign";
+  static const String authDomain = "accounts.spotify.com";  
   static const String scope =
       "user-read-private user-read-email user-library-read user-library-modify user-follow-read user-follow-modify user-top-read user-read-recently-played playlist-read-private playlist-modify-public playlist-modify-private";
-
   static Map<String, String> basicAuthScheme = {
     "content-type": "application/x-www-form-urlencoded",
     "Authorization": "Basic ${base64Encode(

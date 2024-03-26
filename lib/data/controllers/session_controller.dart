@@ -73,7 +73,7 @@ class SessionController extends Api with ChangeNotifier {
 
   signIn() {
     Uri authorizationUrl = Uri.parse(
-      "https://${Api.authDomain}/authorize?client_id=${Api.clientId}&response_type=code&redirect_uri=${Api.authRedirectUri}&scope=${Api.scope}",
+      "https://${Api.authDomain}/authorize?client_id=${Api.clientId}&response_type=code&redirect_uri=${Api.redirectUri}&scope=${Api.scope}",
     );
 
     launchUrl(
@@ -91,7 +91,7 @@ class SessionController extends Api with ChangeNotifier {
       headers: Api.basicAuthScheme,
       parameters: {
         "code": authCode,
-        "redirect_uri": Api.authRedirectUri,
+        "redirect_uri": Api.redirectUri,
         "grant_type": "authorization_code",
       },
       onStart: () {
