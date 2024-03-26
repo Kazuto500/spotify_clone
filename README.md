@@ -48,7 +48,7 @@ Ensure you have the following installed on your system:
     ```dart
     // lib/data/api/api_spotify.dart
 
-    class Config {
+    class Api {
       static const String clientId = 'YOUR_CLIENT_ID';
       static const String clientSecret = 'YOUR_CLIENT_SECRET';
       static const String redirectUri = 'YOUR_REDIRECT_URI';
