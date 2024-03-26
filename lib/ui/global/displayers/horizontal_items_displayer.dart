@@ -58,7 +58,7 @@ class HorizontalItemsDisplayer extends StatelessWidget {
                 child: Text(
                   "See all",
                   style: TextStyle(
-                    color: const Color(0xff1ED760).withOpacity(0.75),
+                    color: Colors.green.withOpacity(0.8),
                   ),
                 ),
               ),

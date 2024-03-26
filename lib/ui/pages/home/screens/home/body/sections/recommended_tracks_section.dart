@@ -26,7 +26,7 @@ class RecommendedTracksSection extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   child: Text(
-                    "Recommended tracks",
+                    "Recommended songs",
                     style: Theme.of(context).textTheme.labelLarge,
                   ),
                 ),

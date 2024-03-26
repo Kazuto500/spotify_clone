@@ -48,7 +48,7 @@ class Api {
     showDialog(
       context: Get.context!,
       barrierColor:
-          Theme.of(Get.context!).scaffoldBackgroundColor.withOpacity(0.75),
+          Theme.of(Get.context!).scaffoldBackgroundColor.withOpacity(0.8),
       builder: (context) => const PopScope(
         canPop: false,
         child: Center(
@@ -85,61 +85,17 @@ class Api {
     return data;
   }
 
-  putQuery({
-    String? domain,
-    required String route,
-    Map<String, dynamic>? params,
-    Map<String, String>? headers,
-    Function? onStart,
-    required Function(Map<String, dynamic> data) onSuccess,
-    Function? onComplete,
-  }) async {
-    debugPrint("Post Route: $route");
-    debugPrint("Params: $params");
-    debugPrint("Headers: $headers");
-
-    try {
-      onStart?.call();
-
-      await http
-          .put(
-        Uri.https(domain ?? _apiDomain, route, params),
-        headers: headers,
-      )
-          .then(
-        (response) async {
-          debugPrint("Post '$route' response status: ${response.statusCode}");
-          debugPrint("Post '$route' response: ${response.body}");
-
-          if (response.statusCode == 200 || response.statusCode == 204) {
-            onSuccess(
-                _dataParser(body: response.body.isEmpty ? "" : response.body));
-          } else {
-            showErrorPage();
-          }
-        },
-      ).whenComplete(
-        () {
-          onComplete?.call();
-        },
-      );
-    } catch (e) {
-      debugPrint(e.toString());
-      showErrorPage();
-    }
-  }
-
   getQuery({
     String? domain,
     required String route,
-    Map<String, dynamic>? params,
+    Map<String, dynamic>? parameters,
     Map<String, String>? headers,
     Function? onStart,
     required Function(Map<String, dynamic> data) onSuccess,
     Function? onComplete,
   }) async {
     debugPrint("Get Route: $route");
-    debugPrint("Params: $params");
+    debugPrint("Parameters: $parameters");
     debugPrint("Headers: $headers");
 
     try {
@@ -147,7 +103,7 @@ class Api {
 
       await http
           .get(
-        Uri.https(domain ?? _apiDomain, route, params),
+        Uri.https(domain ?? _apiDomain, route, parameters),
         headers: headers,
       )
           .then(
@@ -176,14 +132,14 @@ class Api {
   postQuery({
     String? domain,
     required String route,
-    Map<String, dynamic>? params,
+    Map<String, dynamic>? parameters,
     Map<String, String>? headers,
     Function? onStart,
     required Function(Map<String, dynamic> data) onSuccess,
     Function? onComplete,
   }) async {
     debugPrint("Post Route: $route");
-    debugPrint("Params: $params");
+    debugPrint("Parameters: $parameters");
     debugPrint("Headers: $headers");
 
     try {
@@ -191,7 +147,51 @@ class Api {
 
       await http
           .post(
-        Uri.https(domain ?? _apiDomain, route, params),
+        Uri.https(domain ?? _apiDomain, route, parameters),
+        headers: headers,
+      )
+          .then(
+        (response) async {
+          debugPrint("Post '$route' response status: ${response.statusCode}");
+          debugPrint("Post '$route' response: ${response.body}");
+
+          if (response.statusCode == 200 || response.statusCode == 204) {
+            onSuccess(
+                _dataParser(body: response.body.isEmpty ? "" : response.body));
+          } else {
+            showErrorPage();
+          }
+        },
+      ).whenComplete(
+        () {
+          onComplete?.call();
+        },
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+      showErrorPage();
+    }
+  }
+
+  putQuery({
+    String? domain,
+    required String route,
+    Map<String, dynamic>? parameters,
+    Map<String, String>? headers,
+    Function? onStart,
+    required Function(Map<String, dynamic> data) onSuccess,
+    Function? onComplete,
+  }) async {
+    debugPrint("Post Route: $route");
+    debugPrint("Parameters: $parameters");
+    debugPrint("Headers: $headers");
+
+    try {
+      onStart?.call();
+
+      await http
+          .put(
+        Uri.https(domain ?? _apiDomain, route, parameters),
         headers: headers,
       )
           .then(
@@ -220,14 +220,14 @@ class Api {
   deleteQuery({
     String? domain,
     required String route,
-    Map<String, dynamic>? params,
+    Map<String, dynamic>? parameters,
     Map<String, String>? headers,
     Function? onStart,
     required Function(Map<String, dynamic> data) onSuccess,
     Function? onComplete,
   }) async {
     debugPrint("Delete Route: $route");
-    debugPrint("Params: $params");
+    debugPrint("Parameters: $parameters");
     debugPrint("Headers: $headers");
 
     try {
@@ -235,7 +235,7 @@ class Api {
 
       await http
           .delete(
-        Uri.https(domain ?? _apiDomain, route, params),
+        Uri.https(domain ?? _apiDomain, route, parameters),
         headers: headers,
       )
           .then(

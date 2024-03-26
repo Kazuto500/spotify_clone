@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 120),
                     child: Text(
-                      "Sign in to Spotify Clone",
+                      "Spotify Clone",
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
@@ -55,7 +55,11 @@ class LoginPage extends StatelessWidget {
                             onPressed: () {
                               sessionController.signIn();
                             },
-                            label: "Sign",
+                            icon: SvgPicture.asset(
+                              "lib/assets/svg/common/spotify_icon_no_fill.svg",
+                              width: 120,
+                              ),
+                            label: "Login to Spotify-Clone",
                           ),
                         ),
                       ),

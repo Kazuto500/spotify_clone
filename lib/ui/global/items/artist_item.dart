@@ -40,7 +40,7 @@ class _ArtistItemState extends State<ArtistItem> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(bottom: 16),
+            padding: const EdgeInsets.only(bottom: 5),
             child: Stack(
               children: [
                 AspectRatio(
@@ -126,7 +126,7 @@ class _ArtistItemState extends State<ArtistItem> {
                             icon: Icon(
                               color: widget.artist.favorite != null
                                   ? widget.artist.favorite!
-                                      ? const Color(0xff1ED760)
+                                      ? Colors.green
                                       : const Color(0xffa2a2a2)
                                   : const Color(0xff606060),
                               widget.artist.favorite != null

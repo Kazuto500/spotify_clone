@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BottomNavigationBarTab extends StatelessWidget {
-  final String svgAssetRoute;
-  final String? inactiveSvgAssetRoute;
+  final String svgRoute;
+  final String? inactiveSvgRoute;
   final String label;
   final bool active;
   final Color? activeColor;
   final Color? inactiveColor;
   const BottomNavigationBarTab({
     super.key,
-    required this.svgAssetRoute,
-    this.inactiveSvgAssetRoute,
+    required this.svgRoute,
+    this.inactiveSvgRoute,
     required this.label,
     required this.active,
     this.activeColor,
@@ -26,7 +26,7 @@ class BottomNavigationBarTab extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: 1,
             child: SvgPicture.asset(
-              active ? svgAssetRoute : inactiveSvgAssetRoute ?? svgAssetRoute,
+              active ? svgRoute : inactiveSvgRoute ?? svgRoute,
               fit: BoxFit.contain,
               alignment: Alignment.center,
               colorFilter: ColorFilter.mode(

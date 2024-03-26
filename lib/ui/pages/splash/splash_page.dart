@@ -5,14 +5,14 @@ import 'package:spotify_clone/data/controllers/navigator_controller.dart';
 import 'package:spotify_clone/data/controllers/session_controller.dart';
 import 'package:spotify_clone/data/controllers/user_controller.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<SplashPage> createState() => _SplashState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashState extends State<SplashPage> {
   bool launchRequested = false;
 
   @override

@@ -82,7 +82,7 @@ class HomePageDrawer extends StatelessWidget {
                     onPressed: () {
                       sessionController.signOut();
                     },
-                    label: "Sign out",
+                    label: "Logout",
                   ),
                 ),
               ),

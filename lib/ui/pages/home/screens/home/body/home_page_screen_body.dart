@@ -116,7 +116,7 @@ class _HomePageHomeScreenBodyState extends State<HomePageHomeScreenBody> {
                             ? Alignment.centerLeft
                             : Alignment.center,
                         child: Text(
-                          "Made for ${userController.currentUser!.displayName}",
+                          "${userController.currentUser!.displayName}",
                           textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.titleLarge,
                         ),

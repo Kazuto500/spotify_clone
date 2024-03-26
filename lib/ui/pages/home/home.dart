@@ -39,20 +39,20 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: HomePageBottomNavigationBar(
         items: [
           BottomNavigationBarTab(
-            svgAssetRoute: "lib/assets/svg/icons/home_active.svg",
-            inactiveSvgAssetRoute: "lib/assets/svg/icons/home_inactive.svg",
+            svgRoute: "lib/assets/svg/icons/home_active.svg",
+            inactiveSvgRoute: "lib/assets/svg/icons/home_inactive.svg",
             label: "Home",
             active: currentPageIndex == 0,
           ),
           BottomNavigationBarTab(
-            svgAssetRoute: "lib/assets/svg/icons/search_active.svg",
-            inactiveSvgAssetRoute: "lib/assets/svg/icons/search_inactive.svg",
+            svgRoute: "lib/assets/svg/icons/search_active.svg",
+            inactiveSvgRoute: "lib/assets/svg/icons/search_inactive.svg",
             label: "Search",
             active: currentPageIndex == 1,
           ),
           BottomNavigationBarTab(
-            svgAssetRoute: "lib/assets/svg/icons/your_library_active.svg",
-            inactiveSvgAssetRoute:
+            svgRoute: "lib/assets/svg/icons/your_library_active.svg",
+            inactiveSvgRoute:
                 "lib/assets/svg/icons/your_library_inactive.svg",
             label: "Your library",
             active: currentPageIndex == 2,

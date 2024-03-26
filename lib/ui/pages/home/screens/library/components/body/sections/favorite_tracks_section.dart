@@ -27,7 +27,6 @@ class FavoriteTracksSections extends StatelessWidget {
                 child: TrackItem(
                   track: favoritesController.favoriteTracks[index],
                   onFavoriteInitialized: (trackId, isFavorite) {
-                    //No deberia acceder a este callback
                   },
                   onFavoriteChanged: (trackId) {
                     searchMediaController.changeTrackFavoriteStatus(

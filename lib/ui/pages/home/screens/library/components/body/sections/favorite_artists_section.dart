@@ -24,7 +24,6 @@ class FavoriteArtistsSection extends StatelessWidget {
               (index) => ArtistItem(
                 artist: favoritesController.favoriteArtists[index],
                 onFavoriteInitialized: (artistId, isFavorite) {
-                  //No deberia acceder a este callback
                 },
                 onFavoriteChanged: (artistId) {
                   searchMediaController.changeArtistFavoriteStatus(

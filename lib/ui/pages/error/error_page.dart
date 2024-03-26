@@ -17,7 +17,7 @@ class ErrorPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(24),
                   child: Text(
-                    "Error while processing request",
+                    "Error",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
@@ -25,7 +25,7 @@ class ErrorPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(24),
                   child: Text(
-                    "This can commonly occur because too many simultaneous requests were made (In some cases the Spotify API limits the number of requests for a certain period of time).\n\nAmong other less likely reasons, it happens because the credentials are no longer valid or your authorization token has expired abnormally.",
+                    "This issue typically arises when there is an increase in concurrent requests, a common scenario where the Spotify API imposes limitations on the frequency of requests within specific time periods. Alternatively, among less predictable factors, it may occur due to obsolete credentials or an abnormal authorization token expiration",
                     textAlign: TextAlign.center,
                     maxLines: 10,
                     style: Theme.of(context).textTheme.labelSmall,

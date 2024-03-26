@@ -45,15 +45,12 @@ class _LoaderAnimationState extends State<LoaderAnimation>
         _controller.forward();
       }
     });
-
     _controller.forward();
   }
 
   @override
   void dispose() {
     _controller.dispose();
-
-    //
     super.dispose();
   }
 

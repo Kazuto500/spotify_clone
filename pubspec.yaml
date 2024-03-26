@@ -71,7 +71,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - .env
     - lib/assets/svg/common/
     - lib/assets/svg/icons/
 
@@ -87,15 +86,15 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Avenir Next Cyr
+    - family: OpenSans
       fonts:
-        - asset: lib/fonts/AvenirNextCyr-Bold.ttf
+        - asset: lib/fonts/OpenSans-Bold.ttf
           weight: 700
-        - asset: lib/fonts/AvenirNextCyr-Demi.ttf
+        - asset: lib/fonts/OpenSans-SemiBold.ttf
           weight: 600
-        - asset: lib/fonts/AvenirNextCyr-Medium.ttf
+        - asset: lib/fonts/OpenSans-Medium.ttf
           weight: 500
-        - asset: lib/fonts/AvenirNextCyr-Regular.ttf
+        - asset: lib/fonts/OpenSans-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

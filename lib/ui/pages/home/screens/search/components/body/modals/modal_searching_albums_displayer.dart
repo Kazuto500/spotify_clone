@@ -36,7 +36,7 @@ class ModalSearchingAlbumsDisplayer extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Icon(
                     Icons.keyboard_double_arrow_down_rounded,
-                    color: const Color(0xff1ED760).withOpacity(0.75),
+                    color: Colors.green.withOpacity(0.8),
                   ),
                 ),
               ],

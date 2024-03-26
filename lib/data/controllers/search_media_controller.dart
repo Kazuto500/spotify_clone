@@ -41,7 +41,7 @@ class SearchMediaController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "q": search,
         "type": "track,artist,album",
         "market": language,
@@ -109,7 +109,7 @@ class SearchMediaController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "q": searchInputController.value.text.trim(),
         "type": "track",
         "market": language,
@@ -148,7 +148,7 @@ class SearchMediaController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "q": searchInputController.value.text.trim(),
         "type": "artist",
         "market": language,
@@ -187,7 +187,7 @@ class SearchMediaController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "q": searchInputController.value.text.trim(),
         "type": "album",
         "market": language,

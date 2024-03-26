@@ -11,16 +11,16 @@ import 'package:spotify_clone/data/controllers/user_controller.dart';
 import 'package:spotify_clone/ui/pages/error/error_page.dart';
 import 'package:spotify_clone/ui/pages/home/home.dart';
 import 'package:spotify_clone/ui/pages/login/login_page.dart';
-import 'package:spotify_clone/ui/pages/splash/splash.dart';
+import 'package:spotify_clone/ui/pages/splash/splash_page.dart';
 
 
-void main(){
+void main(){  
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      systemNavigationBarColor: Color(0xff121212),
+      systemNavigationBarColor: Colors.black,
     ),
-  );  
+  );    
   runApp(const MyApp());  
 }
 
@@ -53,33 +53,33 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         title: 'Spotify Clone',
         darkTheme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff1ED760)),
-          scaffoldBackgroundColor: const Color(0xff121212),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+          scaffoldBackgroundColor: Colors.black,
           useMaterial3: true,
           textTheme: const TextTheme(
             titleLarge: TextStyle(
-              fontFamily: 'Avenir Next Cyr',
-              fontSize: 24,
+              fontFamily: 'OpenSans',
+              fontSize: 22,
               fontWeight: FontWeight.bold,
               height: 1,
               color: Colors.white,
             ),
             titleMedium: TextStyle(
-              fontFamily: 'Avenir Next Cyr',
-              fontSize: 20,
+              fontFamily: 'OpenSans',
+              fontSize: 18,
               fontWeight: FontWeight.w600,
               height: 1,
               color: Colors.white,
             ),
             titleSmall: TextStyle(
-              fontFamily: 'Avenir Next Cyr',
+              fontFamily: 'OpenSans',
               fontSize: 16,
               fontWeight: FontWeight.w600,
               height: 1,
               color: Colors.white,
             ),
             labelLarge: TextStyle(
-              fontFamily: 'Avenir Next Cyr',
+              fontFamily: 'OpenSans',
               fontSize: 15,
               fontWeight: FontWeight.w600,
               height: 1,
@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             labelMedium: TextStyle(
-              fontFamily: 'Avenir Next Cyr',
+              fontFamily: 'OpenSans',
               fontSize: 13,
               fontWeight: FontWeight.w500,
               height: 1,
@@ -95,7 +95,7 @@ class MyApp extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             labelSmall: TextStyle(
-              fontFamily: 'Avenir Next Cyr',
+              fontFamily: 'OpenSans',
               fontSize: 11,
               fontWeight: FontWeight.w500,
               height: 1,
@@ -106,7 +106,7 @@ class MyApp extends StatelessWidget {
         ),
         themeMode: ThemeMode.dark,
         routes: {
-          "splash": (context) => const Splash(),
+          "splash": (context) => const SplashPage(),
           "error": (context) => const ErrorPage(),
           "login": (context) => const LoginPage(),
           "home": (context) => const HomePage(),

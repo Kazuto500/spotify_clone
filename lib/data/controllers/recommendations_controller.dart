@@ -48,7 +48,7 @@ class RecommendationsController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "limit": "6",
         "market": language,
         "seed_artists": artistsIds.join(","),
@@ -56,11 +56,8 @@ class RecommendationsController extends Api with ChangeNotifier {
       },
       onSuccess: (data) {
         _setLocaleRecommendedTracks(data: data);
-        // _setLocaleRecommendedArtits(data: data);
         _setLocaleRecommendedAlbums(data: data);
-
         _recommendationInitialized = true;
-
         notifyListeners();
       },
     );

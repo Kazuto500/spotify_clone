@@ -13,7 +13,7 @@ class HomePageScreen extends StatelessWidget {
     return Scaffold(
       drawer: const HomePageDrawer(),
       drawerScrimColor:
-          Theme.of(context).scaffoldBackgroundColor.withOpacity(0.75),
+          Theme.of(context).scaffoldBackgroundColor.withOpacity(0.8),
       body: const HomePageHomeScreenBody(),
     );
   }

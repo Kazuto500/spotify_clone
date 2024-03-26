@@ -89,7 +89,7 @@ class SessionController extends Api with ChangeNotifier {
       domain: Api.authDomain,
       route: Api.getTokenRoute,
       headers: Api.basicAuthScheme,
-      params: {
+      parameters: {
         "code": authCode,
         "redirect_uri": Api.authRedirectUri,
         "grant_type": "authorization_code",
@@ -132,7 +132,6 @@ class SessionController extends Api with ChangeNotifier {
   }
 
   _periodicRefreshTokens() {
-    //El token expira cada hora (60 minutos), se dan 10 minutos de gracia
     Timer.periodic(
       const Duration(minutes: 50),
       (timer) => _refreshTokensNow(
@@ -146,7 +145,7 @@ class SessionController extends Api with ChangeNotifier {
       domain: Api.authDomain,
       route: Api.refreshTokenRoute,
       headers: Api.basicAuthScheme,
-      params: {
+      parameters: {
         "grant_type": 'refresh_token',
         "refresh_token": _refreshToken,
       },

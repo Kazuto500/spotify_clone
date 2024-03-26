@@ -48,7 +48,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "time_range": "medium_term",
         "limit": "20",
         "offset": "${offset ?? _favoriteTracks.length}",
@@ -90,7 +90,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "type": "artist",
         "limit": "20",
         if ((empty == null || !empty) && (_favoriteArtists.isNotEmpty))
@@ -133,7 +133,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "limit": "20",
         "offset": "${offset ?? _favoriteAlbums.length}",
       },
@@ -175,7 +175,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "ids": trackId,
       },
       onSuccess: (_) {
@@ -194,7 +194,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "type": "artist",
         "ids": artistId,
       },
@@ -214,7 +214,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "ids": albumId,
       },
       onSuccess: (_) {
@@ -233,7 +233,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "ids": trackId,
       },
       onSuccess: (data) {
@@ -252,7 +252,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "type": "artist",
         "ids": artistId,
       },
@@ -272,7 +272,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "ids": albumId,
       },
       onSuccess: (data) {
@@ -291,7 +291,7 @@ class FavoritesController extends Api with ChangeNotifier {
       headers: {
         "Authorization": "Bearer $token",
       },
-      params: {
+      parameters: {
         "ids": trackId,
       },
       onSuccess: (_) {
@@ -324,7 +324,7 @@ class FavoritesController extends Api with ChangeNotifier {
         "Authorization": "Bearer $token",
         "Content-Type": "application/json"
       },
-      params: {
+      parameters: {
         "type": "artist",
         "ids": artistId,
       },
@@ -358,7 +358,7 @@ class FavoritesController extends Api with ChangeNotifier {
         "Authorization": "Bearer $token",
         "Content-Type": "application/json"
       },
-      params: {
+      parameters: {
         "ids": albumId,
       },
       onSuccess: (_) {

@@ -95,7 +95,7 @@ class _HomePageSearchScreenAppBarState
                     ),
                   ),
                 ),
-                hintText: "What do you want to listen?",
+                hintText: "What do you want to reproduce?",
                 hintStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontSize: 16,
                       color: const Color(0xff535353),

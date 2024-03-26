@@ -20,7 +20,7 @@ class PrimaryButton extends StatelessWidget {
         style: const ButtonStyle(
           elevation: MaterialStatePropertyAll(0),
           backgroundColor: MaterialStatePropertyAll(
-            Color(0xff1ED760),
+            Colors.green,
           ),
           overlayColor: MaterialStatePropertyAll(Colors.black26),
           foregroundColor: MaterialStatePropertyAll(Colors.black),

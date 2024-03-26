@@ -24,7 +24,6 @@ class FavoriteAlbumsSection extends StatelessWidget {
               (index) => AlbumItem(
                 album: favoritesController.favoriteAlbums[index],
                 onFavoriteInitialized: (albumId, isFavorite) {
-                  //No deberia acceder a este callback
                 },
                 onFavoriteChanged: (albumId) {
                   searchMediaController.changeAlbumFavoriteStatus(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 import 'package:spotify_clone/data/controllers/favorites_controller.dart';
 import 'package:spotify_clone/data/controllers/search_media_controller.dart';
@@ -44,7 +43,7 @@ class _HomePageLibraryScreenBodyState extends State<HomePageLibraryScreenBody> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   CustomFilterChip(
-                    label: "Favorite tracks",
+                    label: "Favorite songs",
                     selected: currentFilterIndex == 0,
                     onSelected: () {
                       _pageController.jumpToPage(0);

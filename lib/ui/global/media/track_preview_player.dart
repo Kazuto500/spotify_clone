@@ -92,11 +92,8 @@ class _TrackPreviewPlayerState extends State<TrackPreviewPlayer> {
 
   @override
   void initState() {
-    //
     super.initState();
-
     player.setUrl(widget.track.previewUrl!);
-
     player.playingStream.listen(
       (isPlaying) {
         setState(
@@ -170,7 +167,7 @@ class _TrackPreviewPlayerState extends State<TrackPreviewPlayer> {
                       padding: const EdgeInsets.all(4),
                       icon: Icon(
                         Icons.close_rounded,
-                        color: const Color(0xff1ED760).withOpacity(0.75),
+                        color: Colors.green.withOpacity(0.8),
                       ),
                     ),
                   ),
@@ -259,7 +256,7 @@ class _TrackPreviewPlayerState extends State<TrackPreviewPlayer> {
                                           value:
                                               timeProgress * 100 / 29000 / 100,
                                           backgroundColor: Colors.white24,
-                                          color: const Color(0xff1ED760),
+                                          color: Colors.green,
                                           borderRadius:
                                               BorderRadius.circular(2),
                                         ),
@@ -274,7 +271,7 @@ class _TrackPreviewPlayerState extends State<TrackPreviewPlayer> {
                                                 .textTheme
                                                 .labelSmall!
                                                 .copyWith(
-                                                  color: const Color(0xff1ED760)
+                                                  color: Colors.green
                                                       .withOpacity(0.75),
                                                 ),
                                           ),
@@ -298,83 +295,6 @@ class _TrackPreviewPlayerState extends State<TrackPreviewPlayer> {
                                       runSpacing: 8,
                                       alignment: WrapAlignment.spaceEvenly,
                                       children: [
-                                        SizedBox(
-                                          height: 48,
-                                          child: Material(
-                                            borderRadius:
-                                                BorderRadius.circular(24),
-                                            color: const Color(0xff2A2A2A),
-                                            clipBehavior: Clip.antiAlias,
-                                            child: SizedBox(
-                                              width: 48,
-                                              height: 48,
-                                              child: InkWell(
-                                                onTap: () {
-                                                  launchUrl(
-                                                    Uri.parse(
-                                                      widget.track.spotifyUri,
-                                                    ),
-                                                  );
-                                                },
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(12),
-                                                  child: SvgPicture.asset(
-                                                    "lib/assets/svg/common/spotify_icon_no_fill.svg",
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 48,
-                                          child: Material(
-                                            borderRadius:
-                                                BorderRadius.circular(24),
-                                            color: const Color(0xff2A2A2A),
-                                            child: SizedBox(
-                                              width: 48,
-                                              height: 48,
-                                              child: IconButton(
-                                                onPressed: (timeProgress / 1000)
-                                                            .floor() >=
-                                                        29
-                                                    ? () {
-                                                        player.seek(
-                                                            Duration.zero);
-                                                        // player.play();
-                                                      }
-                                                    : player.playing
-                                                        ? () {
-                                                            player.pause();
-                                                          }
-                                                        : () {
-                                                            player.play();
-                                                          },
-                                                padding: EdgeInsets.zero,
-                                                constraints:
-                                                    const BoxConstraints(
-                                                  maxWidth: 48,
-                                                  maxHeight: 48,
-                                                ),
-                                                iconSize: 24,
-                                                icon: Icon(
-                                                  (timeProgress / 1000)
-                                                              .floor() >=
-                                                          29
-                                                      ? Icons.replay_rounded
-                                                      : player.playing
-                                                          ? Icons.pause_rounded
-                                                          : Icons
-                                                              .play_arrow_rounded,
-                                                  color:
-                                                      const Color(0xff1ED760),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
                                         SizedBox(
                                           height: 48,
                                           child: Material(
@@ -441,6 +361,83 @@ class _TrackPreviewPlayerState extends State<TrackPreviewPlayer> {
                                                                 .favorite_outline_rounded),
                                                   );
                                                 },
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        
+                                        SizedBox(
+                                          height: 48,
+                                          child: Material(
+                                            borderRadius:
+                                                BorderRadius.circular(24),
+                                            color: const Color(0xff2A2A2A),
+                                            child: SizedBox(
+                                              width: 48,
+                                              height: 48,
+                                              child: IconButton(
+                                                onPressed: (timeProgress / 1000)
+                                                            .floor() >=
+                                                        29
+                                                    ? () {
+                                                        player.seek(
+                                                            Duration.zero);
+                                                      }
+                                                    : player.playing
+                                                        ? () {
+                                                            player.pause();
+                                                          }
+                                                        : () {
+                                                            player.play();
+                                                          },
+                                                padding: EdgeInsets.zero,
+                                                constraints:
+                                                    const BoxConstraints(
+                                                  maxWidth: 48,
+                                                  maxHeight: 48,
+                                                ),
+                                                iconSize: 24,
+                                                icon: Icon(
+                                                  (timeProgress / 1000)
+                                                              .floor() >=
+                                                          29
+                                                      ? Icons.replay_rounded
+                                                      : player.playing
+                                                          ? Icons.pause_rounded
+                                                          : Icons
+                                                              .play_arrow_rounded,
+                                                  color:
+                                                      Colors.green,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 48,
+                                          child: Material(
+                                            borderRadius:
+                                                BorderRadius.circular(24),
+                                            color: const Color(0xff2A2A2A),
+                                            clipBehavior: Clip.antiAlias,
+                                            child: SizedBox(
+                                              width: 48,
+                                              height: 48,
+                                              child: InkWell(
+                                                onTap: () {
+                                                  launchUrl(
+                                                    Uri.parse(
+                                                      widget.track.spotifyUri,
+                                                    ),
+                                                  );
+                                                },
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(12),
+                                                  child: SvgPicture.asset(
+                                                    "lib/assets/svg/common/spotify_icon_no_fill.svg",
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),

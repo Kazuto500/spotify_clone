@@ -67,7 +67,7 @@ class _HomePageSearchScreenState extends State<HomePageSearchScreen> {
             ),
             drawer: const HomePageDrawer(),
             drawerScrimColor:
-                Theme.of(context).scaffoldBackgroundColor.withOpacity(0.75),
+                Theme.of(context).scaffoldBackgroundColor.withOpacity(0.8),
             body: HomePageSearchScreenBody(
               isRequestedSearchEmpty: searchMediaController
                   .searchInputController.value.text

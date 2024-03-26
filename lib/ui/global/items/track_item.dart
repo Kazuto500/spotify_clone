@@ -149,7 +149,7 @@ class _TrackItemState extends State<TrackItem> {
                             icon: Icon(
                               color: widget.track.favorite != null
                                   ? widget.track.favorite!
-                                      ? const Color(0xff1ED760)
+                                      ? Colors.green
                                       : const Color(0xffa2a2a2)
                                   : const Color(0xff606060),
                               widget.track.favorite != null
@@ -172,7 +172,7 @@ class _TrackItemState extends State<TrackItem> {
                               context: context,
                               barrierColor: Theme.of(context)
                                   .scaffoldBackgroundColor
-                                  .withOpacity(0.75),
+                                  .withOpacity(0.8),
                               builder: (context) => Center(
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(

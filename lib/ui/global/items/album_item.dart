@@ -75,7 +75,7 @@ class _AlbumItemState extends State<AlbumItem> {
                           ),
                           Positioned.fill(
                             child: Container(
-                              color: Colors.black.withOpacity(index * 0.33),
+                              color: Colors.black.withOpacity(index * 0.4),
                             ),
                           ),
                         ],
@@ -146,8 +146,8 @@ class _AlbumItemState extends State<AlbumItem> {
                           icon: Icon(
                             color: widget.album.favorite != null
                                 ? widget.album.favorite!
-                                    ? const Color(0xff1ED760)
-                                    : const Color(0xffa2a2a2)
+                                    ? Colors.green
+                                    : Colors.grey
                                 : const Color(0xff606060),
                             widget.album.favorite != null
                                 ? widget.album.favorite!
@@ -164,7 +164,7 @@ class _AlbumItemState extends State<AlbumItem> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 16, bottom: 8),
+            padding: const EdgeInsets.only(top: 16, bottom: 3),
             child: Text(
               widget.album.name,
               maxLines: 1,

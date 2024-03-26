@@ -37,13 +37,8 @@ class HomePageSearchScreenBody extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8),
-                      child: Text("Listen to what you like",
-                          style: Theme.of(context).textTheme.titleMedium),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
                       child: Text("Search artists, albums and tracks",
-                          style: Theme.of(context).textTheme.labelSmall),
+                          style: Theme.of(context).textTheme.titleMedium),
                     ),
                   ],
                 ),
@@ -51,7 +46,6 @@ class HomePageSearchScreenBody extends StatelessWidget {
             ),
           );
         } else if (searchMediaController.isSearching) {
-          //validar todos
           return const SafeArea(
             child: Column(
               mainAxisSize: MainAxisSize.min,

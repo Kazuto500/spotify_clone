@@ -20,7 +20,7 @@ class _HomePageLibraryScreenState extends State<HomePageLibraryScreen> {
       ),
       drawer: const HomePageDrawer(),
       drawerScrimColor:
-          Theme.of(context).scaffoldBackgroundColor.withOpacity(0.75),
+          Theme.of(context).scaffoldBackgroundColor.withOpacity(0.8),
       body: const HomePageLibraryScreenBody(),
     );
   }
@@ -49,9 +49,9 @@ class CustomFilterChip extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 4),
         padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(5),
           border: selected ? null : Border.all(color: Colors.white54),
-          color: selected ? const Color(0xff1ED760) : Colors.transparent,
+          color: selected ? Colors.green : Colors.transparent,
         ),
         alignment: Alignment.center,
         child: Text(
